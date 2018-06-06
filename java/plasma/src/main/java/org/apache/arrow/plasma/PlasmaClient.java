@@ -32,7 +32,7 @@ import java.util.List;
  */
 public class PlasmaClient implements ObjectStoreLink {
 
-  private final long conn;
+  protected final long conn;
 
   protected void finalize() {
     PlasmaClientJNI.disconnect(this.conn);
